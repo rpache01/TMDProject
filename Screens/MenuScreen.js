@@ -8,10 +8,11 @@ import {
     Image,
     ImageBackground,
     ViewBase,
-    Alert
+    Alert,
+    Linking
 } from "react-native";
 import {Actions, Router, Scene} from "react-native-router-flux";
-import CarItem from "../Components/CarItem";
+//import CarItem from "../Components/CarItem";
 import styles from "./styles"
 import StyledButton from "../Components/StyledButton"
 //import { HeaderStyleInterpolators } from "react-navigation-stack";
@@ -54,21 +55,32 @@ export default class MenuScreen extends Component {
                             type="primary" //what color is the button 
                             content={"Handbook"}  //title of button
                             onPress={() => {  //what it does on press
-                            Alert.alert("Handbook was pressed");
+                            //Alert.alert("Handbook was pressed");
+                            Actions.scene3("Handbook")
                             }}/>
 
                         <StyledButton //first button
                             type="secondary" //what color is the button 
                             content={"Glossary"}  //title of button
                             onPress={() => {  //what it does on press
-                            Alert.alert("Glossary was pressed");
+                            //Alert.alert("Glossary was pressed");
+                            Actions.scene4("Glossary")
                             }}/>
                         <StyledButton //first button
                             type="primary" //what color is the button 
                             content={"Leadership"}  //title of button
                             onPress={() => {  //what it does on press
-                            Alert.alert("Leadership was pressed");
+                            //Alert.alert("Leadership was pressed");
+                            Actions.scene5("Leadership")
                             }}/>
+
+                        <StyledButton //first button
+                            type="Secondary" //what color is the button 
+                            content={"Website"}  //title of button
+                            onPress={() => {  //what it does on press
+                            Linking.openURL('https://tmd.texas.gov/');
+                            }}/>
+
                     </View>
 
 
