@@ -13,6 +13,7 @@ export default function App() {
           <Scene key="scene1" component={Home} hideNavBar />
           <Scene key="scene2" component={MenuScreen} hideNavBar/>
       </Scene>
+      
     </Router>
   );
 }
