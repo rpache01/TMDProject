@@ -8,19 +8,27 @@ import {
     Image,
     ImageBackground,
     ViewBase,
-    Alert
+    Alert,
+    Dimensions,
+    FlatList
 } from "react-native";
-import {Actions, Router, Scene} from "react-native-router-flux";
-import CarItem from "../Components/CarItem";
-import styles from "./styles"
-import StyledButton from "../Components/StyledButton"
+import {Actions, Router, Scene} from "react-native-router-flux"; // download and install using terminal
+//import CarItem from "../Components/CarItem";
+import  PageListTwo from "../Components/PageListTwo";
+import  PageList from "../Components/PageList";
+import styles from "./styles";
+//import StyledButton from "../Components/StyledButton";
 //import { HeaderStyleInterpolators } from "react-navigation-stack";
+import Unorderedlist from 'react-native-unordered-list';// you must install using termanial and npm
+//import Pdf from "react-native-pdf";
+//import images from "./images";
 
 
 export default class Handbook extends Component {
         
-
+        
         render(){
+           // const source = {uri: 'bundle-assets://assets/to/TMDTableofContents.pdf '};
             return(
                 <View style={{flexDirection: 'row'}}>
                     <TouchableOpacity
@@ -37,17 +45,8 @@ export default class Handbook extends Component {
                     </TouchableOpacity>
                     <View style={styles.Natcontainer}>
                     
-                    <ImageBackground 
-                    source={require("../assets/TMDwallpaper7.jpg")}
-                    style={styles.image}
-                    />
-
-                    <View style={styles.titles}> 
-                        <Text style={styles.title}>{"Handbook"}</Text>
-                        <Text style={styles.subtitle}>{"Duty.Honor.Texas"}</Text>
-                    </View> 
-
-
+                        <PageListTwo />
+                   
                     </View>
                 </View>
 
@@ -56,6 +55,7 @@ export default class Handbook extends Component {
             );
         }
 }
+
 
 const styles1 = StyleSheet.create ({
     container: {
