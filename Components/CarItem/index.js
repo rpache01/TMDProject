@@ -7,7 +7,7 @@ import styles from './styles';
 
 const CarItem = (props) => { //arrow function
 
-    const { name, tagline, image} = props.pages; //these are the different properties for each page made
+    const { name, tagline, image, linea, lineb, linec, linef} = props.pages; //these are the different properties for each page made
                                             // These prop go in text instead of hard coding below
     return (  //returning a view with just not a component 
         <View style={styles.Natcontainer}>
@@ -25,7 +25,15 @@ const CarItem = (props) => { //arrow function
 
         <View style={styles.buttonsContainer}>
           <Text style={styles.subtitle}>{tagline}</Text>
-               
+          
+        </View>
+        <View style={styles.buttonsContainerT}>
+          <Text style={styles.subtitleT}>{linea}</Text>
+          
+          <Text style={styles.subtitleT}>{lineb}</Text>
+          <Text style={styles.subtitleT}>{linec}</Text>
+          <Text style={styles.subtitleT}>{linef}</Text>
+          
         </View>
      </View> //type = primary is sending information/properties from parent to child component
      
