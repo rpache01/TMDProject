@@ -39,7 +39,7 @@ export default class MenuScreen extends Component {
                     <View style={styles.Natcontainer}>
                     
                     <ImageBackground 
-                    source={require("../assets/TMDwallpaper7.jpg")}
+                    source={require("../assets/TMDwallpaper8.jpg")}
                     style={styles.image}
                     />
 
