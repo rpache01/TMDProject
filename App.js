@@ -1,13 +1,16 @@
 //Team 28
+//this is the main page where the routing of each page happens
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {Actions, Router, Scene} from "react-native-router-flux"; //install package
+import {Actions, Router, Scene} from "react-native-router-flux"; //install react-native-router-flux package
 import Glossary from './Screens/Glossary';
 import Handbook from './Screens/Handbook';
 import Home from './Screens/Home';
 import Leadership from './Screens/Leadership';
 import MenuScreen from './Screens/MenuScreen';
+//import Pdfscreen from './Screens/Pdfscreen';
 
 export default function App() {
   return (
