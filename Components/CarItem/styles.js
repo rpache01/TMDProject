@@ -20,6 +20,12 @@ const styles = StyleSheet.create ({
         color: 'white',
         fontWeight: 'bold',
       },
+      subtitleT: { //tutoral line font, color, and size change
+        fontSize: 16,
+        color: 'white',
+        fontWeight: 'bold',
+        padding: 10,
+      },
     
       image: {
         width: "100%",
@@ -31,6 +37,12 @@ const styles = StyleSheet.create ({
       buttonsContainer: {
         position: "absolute",
         bottom: 50,
+        width: "100%",
+        alignItems: 'center',
+      },
+      buttonsContainerT: { //Tutorial location
+        position: "absolute",
+        marginVertical: 330,
         width: "100%",
         alignItems: 'center',
       }
