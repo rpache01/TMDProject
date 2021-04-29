@@ -17,9 +17,23 @@ const styles = StyleSheet.create ({
       
       },
       subtitle: {
+        marginVertical: 20,
         fontSize: 16,
         color: 'white',
         fontWeight: 'bold',
+      },
+      space: {
+        width:20,
+        height: 20,
+      },
+      subtitleLeButton: {
+        marginVertical: 20,
+        height: 30,
+        fontSize: 20,
+        color: 'white',
+        fontWeight: 'bold',
+        borderRadius: 20,
+        width: "100%"
       },
     
       image: {
@@ -34,6 +48,14 @@ const styles = StyleSheet.create ({
         bottom: 50,
         width: "100%",
         alignItems: 'center',
+      },
+      buttonsContainerLE: {
+        position: "absolute",
+        marginVertical: 330,
+        //justifyContent: 'center',
+        width: "100%",
+        alignItems: 'center',
+        justifyContent: 'space-between',
       },
       containerHeader: {
         position: 'absolute',
@@ -54,7 +76,18 @@ const styles = StyleSheet.create ({
         width: 60,
         height: 60,
         resizeMode: 'contain',
-    }
+    },
+    containerPdf: {
+      flex: 1,
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      marginTop: 25,
+  },
+  pdf: {
+      flex:1,
+      width:Dimensions.get('window').width,
+      height:Dimensions.get('window').height,
+  }
 
 
 });
