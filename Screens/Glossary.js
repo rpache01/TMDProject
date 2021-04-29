@@ -8,13 +8,15 @@ import {
     Image,
     ImageBackground,
     ViewBase,
-    Alert
+    Alert,
+    FlatList
 } from "react-native";
 import {Actions, Router, Scene} from "react-native-router-flux";
 import CarItem from "../Components/CarItem";
 import styles from "./styles"
 import StyledButton from "../Components/StyledButton"
 //import { HeaderStyleInterpolators } from "react-navigation-stack";
+import {FlatListSlider} from 'react-native-flatlist-slider'; //install using npm i react-native-flatlist-slider
 
 
 export default class Glossary extends Component {
@@ -38,14 +40,29 @@ export default class Glossary extends Component {
                     <View style={styles.Natcontainer}>
                     
                     <ImageBackground 
-                    source={require("../assets/TMDwallpaper7.jpg")}
+                    source={require("../assets/TMDwallpaper9.jpg")}
                     style={styles.image}
                     />
 
                     <View style={styles.titles}> 
                         <Text style={styles.title}>{"Glossary"}</Text>
-                        <Text style={styles.subtitle}>{"Terms Below"}</Text>
-                    </View> 
+                        <Text style={styles.space}></Text>
+                    </View>
+
+                   
+                        <FlatListSlider
+                            data={images}
+                            imageKey={'banner'}
+                            width= {400}
+                            height= {500}
+                            contentContainerStyle={{paddingVertical: 5}}
+                            indicatorContainerStyle={{position:'absolute', bottom: 10}}
+                            local
+                            timer= {20000}
+                        />
+                    {/*
+                    The flatlistslider helps to see multiple images in one page
+                    */}
 
 
                     </View>
@@ -56,6 +73,11 @@ export default class Glossary extends Component {
             );
         }
 }
+const images =[
+    {banner: require('../assets/Terms11.jpg')},
+    {banner: require("../assets/Terms22.jpg")},
+    {banner: require("../assets/Terms33.jpg")}
+]
 
 const styles1 = StyleSheet.create ({
     container: {
